@@ -1,4 +1,4 @@
-import express, { Router } from "express";
+/*import express, { Router } from "express";
 const router=express.Router();
 import {client} from "./index.js";
 import { ObjectId } from "mongodb";
@@ -16,3 +16,4 @@ router.get("/:id",async function(req,res){
 
 export const UserRouter=router;
 
+*/
