@@ -6,7 +6,7 @@ import jwt  from "jsonwebtoken";
 import {auth} from "./auth.js";
 router.get("/home",async function(req,res){
     const result =await client.db("Todo").collection("user")
-    .find({}).toArray();
+    .findOne({});
     res.send(result);
 })
 router.get("/:id",async function(req,res){
