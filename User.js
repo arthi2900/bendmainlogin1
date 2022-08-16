@@ -6,7 +6,7 @@ import jwt  from "jsonwebtoken";
 import {auth} from "./auth.js";
 
 
-router.get("/:id",async function(req,res){
+router.get("/:id",auth,async function(req,res){
     const {id}=req.params;
     const result =await client.db("Todo").collection("user")
     .findOne({_id:ObjectId(id)});
