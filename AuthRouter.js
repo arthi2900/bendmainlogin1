@@ -40,7 +40,7 @@ const user=username;
 const newUser1={
     username,password,token
 }
-const userstoretoken=await client.db("Todo").collection("user")
+const userstoretoken=await client.db("Todo").collection("user1")
 .insertOne(newUser1);
 res.send({message:"successful login",token:token,user:user});
 res.send(userstoretoken);
