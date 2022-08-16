@@ -7,8 +7,9 @@ import {auth} from "./auth.js";
 router.get("/home",auth,async function(req,res){
     const result =await client.db("Todo").collection("user")
     .findOne({});
-    res.json(result);
-})
+    res.send(result);
+  })
+  
 router.get("/:id",async function(req,res){
     const {id}=req.params;
     const result =await client.db("Todo").collection("user")
