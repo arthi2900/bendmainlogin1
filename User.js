@@ -4,10 +4,10 @@ import {client} from "./index.js";
 import { ObjectId } from "mongodb";
 import jwt  from "jsonwebtoken";
 import {auth} from "./auth.js";
-router.get("/",async function(req,res){
+router.get("/home",async function(req,res){
     const result =await client.db("Todo").collection("user")
     .find({}).toArray();
-    res.send(result);
+    res.json(result);
 })
 router.get("/:id",async function(req,res){
     const {id}=req.params;
