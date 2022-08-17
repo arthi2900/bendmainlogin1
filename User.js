@@ -7,7 +7,7 @@ import {auth} from "./auth.js";
 
 router.get("/",auth,async function(req,res){
     const result =await client.db("Todo").collection("user")
-      .findOne({})
+      .findOne({id:ObjectId(res.id)})
         res.send(result);
   })
 
