@@ -6,9 +6,9 @@ import jwt  from "jsonwebtoken";
 import {auth} from "./auth.js";
 
 router.get("/",auth,async function(req,res){
-    const result =await client.db("Todo").collection("user")
-      .findOne({})
-        res.send(result);
+  const result =await client.db("Todo").collection("user")
+  .findOne({});
+  res.send(result);
   })
 
 
