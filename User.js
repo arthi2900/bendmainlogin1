@@ -8,8 +8,8 @@ import {auth} from "./auth.js";
 router.get("/",auth,async function(req,res){
   const connection=await client.connect();
   const result =await db("Todo").collection("user")
-  .findOne({});
-  res.json(result);
+  .findOne({_id:ObjectId(req.id)});
+  res.send(result);
   await connection.close()
   })
 
