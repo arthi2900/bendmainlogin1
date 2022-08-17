@@ -37,14 +37,7 @@ router.post("/login",async function(req,res){
 if(isPasswordMatch){
 const token=jwt.sign({id:userfromdb._id},process.env.SECRET_KEY);
 const user=username;
-const newUser1={
-    username,password,token
-}
-const userstoretoken=await client.db("Todo").collection("user1")
-.insertOne(newUser1);
 res.send({message:"successful login",token:token,user:user});
-res.send(userstoretoken);
-
 }
 else{
 res.status(401).send({message:"Invalid credenitials"});
