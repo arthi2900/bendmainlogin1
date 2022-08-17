@@ -6,6 +6,7 @@ try{
     const verify=jwt.verify(token,process.env.SECRET_KEY);
        if(verify){
         req.id=verify._id;
+        console.log(req.id)
         next();
        }
        else {
