@@ -45,14 +45,14 @@ res.status(401).send({message:"Invalid credenitials"});
 }
    }
  })
- /*
+
 router.get("/user", async function (req, res) {
     const result =await client.db("Todo").collection("user")
     .find({}).toArray();
     res.send(result);
 
 });
-*/
+
 router.get("/:id",async function (req, res) {
     const {id}=req.params;
     const result =await client.db("Todo").collection("user")
