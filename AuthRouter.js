@@ -45,7 +45,7 @@ res.status(401).send({message:"Invalid credenitials"});
 }
    }
  })
-
+/*
 router.get("/user", async function (req, res) {
     const result =await client.db("Todo").collection("user")
     .find({}).toArray();
@@ -69,4 +69,5 @@ router.delete("/:id",async function  (req, res) {
     
     
 });
+*/
 export const AuthRouter=router;
